@@ -1,0 +1,135 @@
+.root {
+  -fx-background-color: #f0d99b;
+}
+.text-field{
+  -fx-background-color:#eee3c6;
+}
+
+.tool-bar {
+  -fx-background-color: #f8d26a;
+}
+.button {
+  -fx-background-color: #775f1c;
+  -fx-text-fill: white;
+  -fx-font-family: "Arial";
+  -fx-font-size: 15px;
+}
+.menu-button {
+  -fx-background-color: #775f1c;
+  -fx-font-family: "Arial";
+  -fx-font-size: 15px;
+  -fx-text-fill: white;
+  -fx-shadow-highlight-color: #0000;
+}
+.menu-item:focused {
+  -fx-selection-bar: #775f1c;
+}
+.menu-item:focused .label {
+  -fx-text-fill: white;
+}
+.label {
+  -fx-text-fill: white;
+}
+.menu-button:filled {
+  -fx-background-color: #775f1c;
+  -fx-font-family: "Arial";
+  -fx-font-size: 15px;
+  -fx-text-fill: white;
+}
+.menu-item .label {
+  -fx-font-family: "Arial";
+  -fx-text-fill: black;
+}
+.context-menu {
+  -fx-background-color: #f8d26a;
+  -fx-color: f8d26a;
+}
+.menu-item:focused {
+  fx-background-color: #ff0000;
+}
+.context-menu .scroll-arrow:hover {
+  -fx-background-color: #ff0000;
+}
+
+#Ico {
+  -fx-graphic: url("CSS/Images/Cdefaultlogo.png");
+  -fx-content-display: graphic-only;
+}
+#sortby {
+  -fx-font-family: "Arial";
+  -fx-text-fill: black;
+  -fx-font-size: 15px;
+}
+#Title {
+  -fx-text-fill: white;
+  -fx-font-family: "Arial";
+  -fx-font-size: 20px;
+}
+#Topbar {
+  -fx-border-color: #423205;
+  -fx-background-color: #423205;
+}
+#MenuBar {
+  -fx-background-image: url("CSS/Images/Pattern1.png");
+}
+#AddB {
+  -fx-background-color: #0b6923;
+  -fx-font-size: 10px;
+}
+#MinusB {
+  -fx-background-color: #771c1c;
+  -fx-font-size: 10px;
+}
+#ExitB {
+  -fx-background-color: #ff0000;
+}
+.table-view {
+  -fx-background-color: transparent;
+}
+
+.table-view:focused {
+  -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+  -fx-background-color: #775f1c;
+  -fx-border-color: #423205;
+}
+
+.table-view .column-header-background .label {
+  -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+  -fx-border-color: #423205;
+  -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+  -fx-table-cell-border-color: #b3a170;
+}
+
+.table-row-cell {
+  -fx-background-color: #f0d99b;
+  -fx-font-family: "Arial";
+  -fx-font-size: 13px;
+  -fx-table-cell-border-color: #b3a170;
+  -fx-text-fill:black;
+}
+
+.table-row-cell:odd {
+  -fx-background-color: #f0d99b;
+  -fx-table-cell-border-color: #b3a170;
+  -fx-text-fill:black;
+}
+
+.table-row-cell:selected {
+  -fx-background-color: #fcfaa0;
+  -fx-text-fill:black;
+}
+.table-view:focused .table-row-cell:filled:focused:selected {
+  -fx-text-fill: rgb(68, 56, 0);
+}
+.table-view:focused .table-row-cell:filled:selected .table-cell {
+  -fx-text-fill: rgb(68, 56, 0);
+}

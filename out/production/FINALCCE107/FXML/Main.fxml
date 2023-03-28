@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="Scenepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxapplication.AppControl">
+   <center>
+      <TableView fx:id="MainT" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn id="Item" fx:id="Itemname" onEditCommit="#commitItemname" prefWidth="220.0" sortable="false" text="Item Name" />
+            <TableColumn id="Pr1" fx:id="Property1" maxWidth="2500.0" onEditCommit="#commitProperty1" prefWidth="200.0" sortable="false" text="Property#1" />
+            <TableColumn id="Pr2" fx:id="Property2" onEditCommit="#commitProperty2" prefWidth="200.0" sortable="false" text="Property #2" />
+            <TableColumn id="NPr1" fx:id="NumProperty1" onEditCommit="#commitNumproperty1" prefWidth="70.0" sortable="false" text="Num..P #1" />
+            <TableColumn id="NPr2" fx:id="NumProperty2" onEditCommit="#commitNumproperty2" prefWidth="70.0" sortable="false" text="Num..P #2" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <items>
+            <Button fx:id="AddB" mnemonicParsing="false" onAction="#Add" prefHeight="25.0" prefWidth="101.0" text="ADD CELL" />
+            <Button fx:id="MinusB" mnemonicParsing="false" onAction="#Minus" prefHeight="25.0" prefWidth="115.0" text="DETRACT CELL" />
+         </items>
+      </ToolBar>
+   </bottom>
+   <left>
+      <ToolBar fx:id="MenuBar" orientation="VERTICAL" prefHeight="720.0" prefWidth="115.0" BorderPane.alignment="CENTER">
+         <items>
+            <Label fx:id="sortby" prefHeight="17.0" prefWidth="100.0" text="Sort by" />
+            <MenuButton fx:id="mbItemname" mnemonicParsing="false" text="Item Name">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#sortMergeitemname" text="Merge Sort(A to Z)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortMergeitemname" text="Merge Sort(Z to A)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortMergeLengthitemname" text="Merge Sort(Length)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortMergeLengthitemname" text="Merge Sort(Reverse Length)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortInsertionitemname" text="Insertion Sort(A to Z)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortInsertionitemname" text="Insertion Sort(Z to A)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortInsertionLengthitemname" text="Insertion Sort(Length)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortInsertionLengthitemname" text="Insertion Sort(Reverse Length)" />
+              </items>
+            </MenuButton>
+            <MenuButton fx:id="mbItemname1" layoutX="10.0" layoutY="31.0" mnemonicParsing="false" text="Property #1">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sortMergeProperty1" text="Merge Sort(A to Z)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortMergeProperty1" text="Merge Sort(Z to A)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortMergeLengthProperty1" text="Merge Sort(Length)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortMergeLengthProperty1" text="Merge Sort(ReverseLength)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortInsertionproperty1" text="Insertion Sort(A to Z)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortInsertionproperty1" text="Insertion Sort(Z to A)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortInsertionLengthproperty1" text="Ins2ertion Sort(Length)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortInsertionLengthproperty1" text="Insertion Sort(Reverse Length)" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="mbItemname11" mnemonicParsing="false" text="Property #2">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sortMergeProperty2" text="Merge Sort(A to Z)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortMergeProperty2" text="Merge Sort(Z to A)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortMergeLengthProperty2" text="Merge Sort(Length)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortMergeLengthProperty2" text="Merge Sort(ReverseLength)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortInsertionproperty2" text="Insertion Sort(A to Z)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortInsertionproperty2" text="Insertion Sort(Z to A)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortInsertionLengthproperty2" text="Insertion Sort(Length)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortInsertionLengthproperty2" text="Insertion Sort(Reverse Length)" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="mbItemname111" mnemonicParsing="false" text="Num.. Property #1">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sortMergeNProperty1" text="Merge Sort(1 to 10)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortMergeNProperty1" text="Merge Sort(10 to 1)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortMergeLengthNProperty1" text="Merge Sort(Length)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortMergeLengthNProperty1" text="Merge Sort(ReverseLength)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortInsertionnproperty1" text="Insertion Sort(1 to 10)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortInsertionnproperty1" text="Insertion Sort(10 to 1)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortInsertionLengthnproperty1" text="Insertion Sort(Length)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortInsertionLengthnproperty1" text="Insertion Sort(Reverse Length)" />
+               </items>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="mbItemname1111" layoutX="10.0" layoutY="153.0" mnemonicParsing="false" text="Num.. Property #2">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#sortMergeNProperty2" text="Merge Sort(1 to 10)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortMergeNProperty2" text="Merge Sort(10 to 1)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortMergeLengthNProperty2" text="Merge Sort(Length)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortMergeLengthNProperty2" text="Merge Sort(ReverseLength)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortInsertionnproperty2" text="Insertion Sort(A to Z)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortInsertionnproperty2" text="Insertion Sort(Z to A)" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortInsertionLengthnproperty2" text="Insertion Sort(1 to 10)" />
+                  <MenuItem mnemonicParsing="false" onAction="#reversesortInsertionLengthnproperty2" text="Insertion Sort(10 to 1)" />
+               </items>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </MenuButton>
+         </items>
+      </ToolBar>
+   </left>
+   <top>
+      <VBox prefHeight="10.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar fx:id="Topbar" nodeOrientation="RIGHT_TO_LEFT" onMouseDragged="#drag" onMousePressed="#dragpre" prefHeight="40.0" prefWidth="200.0">
+               <items>
+                  <GridPane alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="884.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="837.0" minWidth="10.0" prefWidth="41.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="850.0" minWidth="10.0" prefWidth="785.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="747.0" minWidth="1.0" prefWidth="32.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="29.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="ExitB" alignment="TOP_LEFT" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#Exit_Func" prefHeight="25.0" prefWidth="0.0" text="X" GridPane.columnIndex="3" />
+                        <Label fx:id="Title" alignment="TOP_LEFT" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="131.0" text="Collet 1.0.0" GridPane.columnIndex="1" />
+                        <Button alignment="TOP_LEFT" layoutX="768.0" layoutY="13.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#Min_Func" prefHeight="25.0" prefWidth="0.0" text="-" GridPane.columnIndex="2" />
+                        <Label fx:id="Ico" text="C" />
+                     </children>
+                  </GridPane>
+               </items>
+            </ToolBar>
+            <ToolBar fx:id="Bottombar" prefHeight="40.0" prefWidth="200.0">
+               <items>
+                  <Button fx:id="NewB" mnemonicParsing="false" onAction="#Create" text="New">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="OpenB" mnemonicParsing="false" onAction="#Open" text="Open">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="SaveB" mnemonicParsing="false" onAction="#Save" text="Save as">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="ESaveB" mnemonicParsing="false" onAction="#ESave" text="Save">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font></Button>
+                  <TextField fx:id="col1" onKeyPressed="#renamecol1" prefHeight="0.0" prefWidth="125.0" />
+                  <TextField fx:id="col2" layoutX="208.0" layoutY="10.0" onKeyPressed="#renamecol2" prefHeight="25.0" prefWidth="125.0" />
+                  <TextField fx:id="col3" layoutX="361.0" layoutY="10.0" onKeyPressed="#renamecol3" prefHeight="25.0" prefWidth="125.0" />
+                  <TextField fx:id="col4" layoutX="514.0" layoutY="10.0" onKeyPressed="#renamecol4" prefHeight="25.0" prefWidth="125.0" />
+                  <TextField fx:id="col5" layoutX="607.0" layoutY="10.0" onKeyPressed="#renamecol5" prefHeight="0.0" prefWidth="125.0" />
+               </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

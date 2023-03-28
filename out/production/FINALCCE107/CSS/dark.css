@@ -1,0 +1,118 @@
+.root {
+    -fx-background-color: #1d1d1c;
+  }
+  .text-field{
+    -fx-background-color:#696969;
+  }
+  
+  .tool-bar {
+    -fx-background-color: #1d1d1c;
+  }
+  .button {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+    -fx-font-size: 15px;
+  }
+  .menu-button {
+    -fx-background-color: #000000;
+    -fx-font-family: "Arial";
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+    -fx-shadow-highlight-color: #0000;
+  }
+  .menu-item:focused {
+    -fx-selection-bar: #3a3a3a;
+  }
+  .menu-item:focused .label {
+    -fx-text-fill: white;
+  }
+  .label {
+    -fx-text-fill: white;
+  }
+  .menu-item .label {
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;
+  }
+  .context-menu {
+    -fx-background-color: #535353;
+    -fx-color: f8d26a;
+  }
+
+  #Ico {
+    -fx-graphic: url("CSS/Images/Cdarklogo.png");
+    -fx-content-display: graphic-only;
+  }
+  #sortby {
+    -fx-font-family: "Arial";
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-font-size: 15px;
+  }
+  #Title {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+    -fx-font-size: 20px;
+  }
+  #Topbar {
+    -fx-border-color: #2e2e2e;
+    -fx-background-color: #2e2e2e;
+  }
+  #MenuBar {
+    -fx-border-color: #000000;
+  }
+  #AddB {
+    -fx-background-color: #283b2d;
+    -fx-font-size: 10px;
+  }
+  #MinusB {
+    -fx-background-color: #463131;
+    -fx-font-size: 10px;
+  }
+  #ExitB {
+    -fx-background-color: #ff0000;
+  }
+  .table-view {
+    -fx-background-color: transparent;
+  }
+  
+  .table-view:focused {
+    -fx-background-color: transparent;
+  }
+  
+  .table-view .column-header-background {
+    -fx-background-color: #696969;
+    -fx-border-color: #696969;
+  }
+  
+  .table-view .column-header-background .label {
+    -fx-background-color: transparent;
+  }
+  
+  .table-view .column-header {
+    -fx-border-color: #000000;
+    -fx-background-color: transparent;
+  }
+  
+  .table-view .table-cell {
+    -fx-table-cell-border-color: #000000;
+  }
+  
+  .table-row-cell {
+    -fx-background-color: #949494;
+    -fx-font-family: "Arial";
+    -fx-font-size: 13px;
+    -fx-table-cell-border-color: #949494;
+    -fx-text-fill: white;
+  }
+  
+  
+  .table-row-cell:selected {
+    -fx-background-color: #000000;
+    -fx-text-fill:rgb(255, 255, 255);
+  }
+  .table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-text-fill: rgb(245, 245, 245);
+  }
+  .table-view:focused .table-row-cell:filled:selected .table-cell {
+    -fx-text-fill: rgb(255, 255, 255);
+  }
